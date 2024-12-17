@@ -1,0 +1,10 @@
+{
+    "appName": {
+        "message": "Todo con IA",
+        "description": "El nombre de la aplicación"
+    },
+    "appDescription": {
+        "message": "¡Tu gestor de tareas personal inteligente impulsado por IA! Transforma tus objetivos en pasos accionables utilizando inteligencia artificial avanzada. Características: 1) Divide grandes objetivos en tareas manejables 2) Soporte multilingüe (Español, Inglés, Árabe y más) 3) Organiza tareas en categorías 4) Añade subtareas para una planificación detallada 5) Interfaz fácil de usar 6) Guardado automático 7) Seguimiento de tareas completadas. ¡Perfecto para estudiantes, profesionales y gestores de proyectos! Deja que la IA te ayude a mantenerte organizado y productivo.",
+        "description": "Descripción completa de la aplicación"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "appName": {
+        "message": "Todo avec IA",
+        "description": "Le nom de l'application"
+    },
+    "appDescription": {
+        "message": "Votre gestionnaire de tâches personnel intelligent alimenté par l'IA ! Transformez vos objectifs en étapes réalisables grâce à l'intelligence artificielle avancée. Fonctionnalités : 1) Décomposez les grands objectifs en tâches gérables 2) Support multilingue (Français, Anglais, Arabe et plus) 3) Organisez les tâches en catégories 4) Ajoutez des sous-tâches pour une planification détaillée 5) Interface conviviale 6) Sauvegarde automatique 7) Suivi des tâches accomplies. Parfait pour les étudiants, les professionnels et les chefs de projet ! Laissez l'IA vous aider à rester organisé et productif.",
+        "description": "Description complète de l'application"
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id="appTitle">قائمة المهام</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelect">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
+    <!-- Mode Selector -->
+    <div class="mode-selector">
+        <button id="simpleMode" class="mode-btn active">Simple</button>
+        <button id="aiMode" class="mode-btn">AI</button>
+    </div>
+
+    <!-- AI Input Container -->
+    <div class="ai-input-container">
+        <div class="input-hint">Describe your goal, and I'll help break it down into manageable tasks.</div>
+        <textarea id="goalInput" placeholder="Enter your goal here..."></textarea>
+        <button id="generateBtn">Generate Tasks</button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <button id="addCategoryBtn">Add Category</button>
+        <div class="tabs" id="tabs"></div>
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+            <button id="addTaskBtn">Add</button>
+        </div>
+        <div id="taskList"></div>
+    </div>
+
+    <!-- Add Category Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add Category</h2>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="categoryInput" placeholder="Enter category name...">
+            </div>
+            <div class="modal-footer">
+                <button id="saveBtn">Save</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="confirmTitle"></h3>
+            </div>
+            <div class="modal-body">
+                <p id="confirmMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="confirmDelete" class="delete-btn">Delete</button>
+                <button id="cancelDelete" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

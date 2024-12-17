@@ -1,0 +1,10 @@
+{
+    "appName": {
+        "message": "Todo with AI",
+        "description": "The name of the application"
+    },
+    "appDescription": {
+        "message": "AI-powered task manager that breaks down your goals into detailed, actionable steps. Features: AI planning, Multi-language",
+        "description": "Comprehensive description of the application"
+    }
+}

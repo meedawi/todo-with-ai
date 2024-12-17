@@ -1,0 +1,752 @@
+/* General Styles */
+body {
+    width: 600px;
+    min-height: 400px;
+    padding: 24px;
+    background: #f8f9fa;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Language Selector */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-selector select {
+    padding: 6px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+/* Mode Selector */
+.mode-selector {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.mode-btn {
+    padding: 10px 20px;
+    border: 2px solid #0d6efd;
+    background: white;
+    color: #0d6efd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+    background: #f0f7ff;
+}
+
+.mode-btn.active {
+    background: #0d6efd;
+    color: white;
+}
+
+/* Tasks */
+.task {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    flex-direction: column;
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.task-body {
+    width: 100%;
+    padding-left: 44px;
+}
+
+.subtasks {
+    margin-top: 8px;
+}
+
+.subtask {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+}
+
+.subtask:hover {
+    background: #f0f7ff;
+    border-color: #0d6efd;
+}
+
+.info-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e7f1ff;
+    color: #0d6efd;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+}
+
+.info-button:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+.task:hover {
+    transform: translateY(-1px);
+    border-color: #0d6efd;
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.1);
+}
+
+.task-drag-handle {
+    cursor: move;
+    padding: 0 8px;
+    color: #adb5bd;
+    font-size: 20px;
+}
+
+.task-checkbox {
+    margin: 0 12px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0d6efd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.task-checkbox:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.task-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 8px;
+}
+
+.task-text {
+    flex: 1;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.task.completed {
+    background: #f8f9fa;
+    border-color: #e9ecef;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.tab .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    color: rgb(239, 7, 7);
+    background-color: #fffdfe;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+    margin: 0px;
+
+
+
+}
+
+.delete-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: white;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+}
+
+.delete-task:hover {
+    opacity: 1;
+    background-color: #c82333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Add Task Input */
+.task-input {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.task-input input:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+    background: white;
+}
+
+.task-input button {
+    padding: 14px 24px;
+    background: linear-gradient(45deg, #198754, #157347);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(25, 135, 84, 0.2);
+}
+
+.task-input button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(25, 135, 84, 0.3);
+}
+
+/* Language Selector */
+.language-selector {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-selector select:hover {
+    border-color: #0d6efd;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+    margin-bottom: 24px;
+}
+
+.modal-header h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.modal-body {
+    margin-bottom: 24px;
+}
+
+.modal-body input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.modal-body input:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+    background: white;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.modal-footer button {
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.modal-footer button.save {
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+.modal-footer button.save:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(13, 110, 253, 0.3);
+}
+
+.modal-footer button.cancel {
+    background: white;
+    color: #6c757d;
+    border: 2px solid #e9ecef;
+}
+
+.modal-footer button.cancel:hover {
+    background: #f8f9fa;
+    border-color: #6c757d;
+}
+
+/* Loading Animation */
+.loading {
+    display: none;
+    text-align: center;
+    margin: 24px 0;
+    padding: 24px;
+    color: #2c3e50;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.loading.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    animation: loadingPulse 2s infinite;
+}
+
+.loading .spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e9ecef;
+    border-top-color: #0d6efd;
+    border-radius: 50%;
+    animation: loadingSpin 1s linear infinite;
+}
+
+.loading p {
+    font-size: 14px;
+    color: #495057;
+}
+
+@keyframes loadingSpin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes loadingPulse {
+    0% { 
+        background: #f8f9fa;
+        border-color: #e9ecef;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+    50% { 
+        background: #e9ecef;
+        border-color: #0d6efd;
+        box-shadow: 0 6px 12px rgba(13, 110, 253, 0.1);
+    }
+    100% { 
+        background: #f8f9fa;
+        border-color: #e9ecef;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+}
+
+/* Disable interaction while loading */
+.loading.active ~ * {
+    pointer-events: none;
+    opacity: 0.5;
+    filter: blur(1px);
+    transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* مؤشر التحميل */
+.loading-spinner {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.loading-spinner .spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+.loading-text {
+    margin-top: 10px;
+    color: #666;
+}
+
+/* تحسينات إضافية */
+.form-select, .form-control {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    margin-bottom: 15px;
+}
+
+.list-group-item {
+    margin-bottom: 5px;
+    border-radius: 4px !important;
+}
+
+/* تنسيق للمهام المولدة */
+.ai-generated-task {
+    background-color: #e3f2fd;
+    border-left: 4px solid #1976d2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* تنسيق النموذج */
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+}
+
+/* تحسينات إضافية */
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 150px;
+    max-width: 250px;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2c3e50 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* RTL Support for Tooltips */
+[dir="rtl"] .tooltip .tooltip-text {
+    text-align: right;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    width: 600px;
+    padding: 24px;
+    background: #f8f9fa;
+    min-height: 400px;
+}
+
+.container {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+/* Mode Selector */
+.mode-selector {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.mode-btn {
+    padding: 12px 24px;
+    border: 2px solid #0d6efd;
+    background: white;
+    color: #0d6efd;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+    background: #f0f7ff;
+    transform: translateY(-1px);
+}
+
+.mode-btn.active {
+    background: #0d6efd;
+    color: white;
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+/* AI Input Container */
+.ai-input-container {
+    display: none;
+    margin-bottom: 24px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.ai-input-container.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.ai-input-container textarea {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    height: 120px;
+    resize: none;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.ai-input-container textarea:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+    background: white;
+}
+
+.ai-input-container .input-hint {
+    font-size: 13px;
+    color: #6c757d;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    padding: 0 4px;
+}
+
+.ai-input-container button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+.ai-input-container button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* Add Category Button */
+#addCategoryBtn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+#addCategoryBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    padding: 4px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.tab {
+    padding: 8px 10px;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tab:hover {
+    background: #f8f9fa;
+    transform: translateY(-1px);
+}
+
+.tab.active {
+    background: #e7f1ff;
+    border-color: #0d6efd;
+    color: #0d6efd;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.1);
+}
