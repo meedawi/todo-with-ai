@@ -1,39 +1,28 @@
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/[your-username]/todo-with-ai.git
-git push -u origin maingit init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/[your-username]/todo-with-ai.git
-git push -u origin main# Todo with AI - إضافة كروم لإدارة المهام
+Todo with AI: Your Intelligent Task Management Solution
 
-إضافة كروم تساعدك على إدارة مهامك باستخدام الذكاء الاصطناعي.
+Transform any goal into a structured action plan with our AI-powered task manager! Whether you're planning a project, learning a new skill, or organizing your work, our extension helps you break down complex goals into clear, manageable steps.
 
-## المميزات
-- إنشاء قوائم مهام يدوياً
-- توليد مهام فرعية لأي مهمة باستخدام الذكاء الاصطناعي
-- إنشاء خطة عمل كاملة من هدف معين باستخدام الذكاء الاصطناعي
-- حفظ المهام تلقائياً
-- واجهة مستخدم سهلة وبسيطة
+Key Features:
+✓ AI-Powered Task Breakdown: Enter any goal, and our AI instantly creates a detailed, step-by-step plan
+✓ Intelligent Task Organization: Tasks are organized with main objectives and subtasks for clear progression
+✓ Multi-Language Support: Work in your preferred language with our built-in language options
+✓ User-Friendly Interface: Clean, intuitive design makes task management effortless
+✓ Smart Task Planning: Each task includes detailed descriptions and specific action items
+✓ Auto-Save: Never lose your progress with automatic saving
+✓ Progress Tracking: Monitor your advancement through each task and subtask
 
-## كيفية الاستخدام
-1. قم بتثبيت الإضافة في متصفح كروم
-2. اضغط على أيقونة الإضافة لفتح نافذة إدارة المهام
-3. اختر طريقة العمل:
-   - إنشاء قائمة مهام يدوياً
-   - استخدام الذكاء الاصطناعي لتوليد المهام
+Perfect for:
+• Students planning their study goals
+• Professionals managing work projects
+• Personal development and skill acquisition
+• Anyone looking to turn their goals into actionable plans
 
-## التثبيت للمطورين
-1. قم بنسخ المستودع
-2. افتح متصفح كروم
-3. انتقل إلى `chrome://extensions/`
-4. فعّل وضع المطور
-5. اضغط على "تحميل إضافة غير مضغوطة"
-6. اختر مجلد المشروع
+How it works:
+1. Click the extension icon
+2. Enter your goal or objective
+3. Get an instant, detailed breakdown of tasks
+4. Track and complete tasks at your own pace
 
-## المتطلبات
-- متصفح كروم
-- اتصال بالإنترنت للاستفادة من ميزات الذكاء الاصطناعي
+Our AI ensures each task breakdown is detailed, practical, and tailored to beginners, making complex goals achievable through clear, step-by-step instructions.
+
+Try Todo with AI today and experience the power of AI-assisted task planning!
